@@ -1,0 +1,92 @@
+
+<div>
+
+    <div align="center" style="
+    width: 1000px;
+    padding-right: 0px;
+    padding-left: 500px;
+    height: 50px;
+    color: #15ebba;">
+        <h4>
+            <b> ADD World Record Details</b>
+        </h4>
+    </div>
+    <div align="center">
+        <div>
+            <form role="form" style="width: 800px;">
+                <div>
+                    <label>Country:</label>
+                    <input type="text"
+                           tabindex="1" focus-me="record.country" placeholder="Enter country"
+                           name="country" id="country" ng-model="record.country" required="true">
+                </div>
+                <div>
+                    <label>Total Cases:</label>
+                    <input type="text"
+                           tabindex="1" focus-me="record.totalCases" placeholder="Enter Total Cases"
+                           name="totalCases" id="totalCases" ng-model="record.totalCases" required="">
+                </div>
+                <div>
+                    <label>New Cases:</label>
+                    <input type="text"
+                           tabindex="1" focus-me="record.newCases" placeholder="Enter New Cases"
+                           name="newCases" id="newCases" ng-model="record.newCases" required="">
+                </div>
+                <div>
+                    <label>Total Recovered:</label>
+                    <input type="text"
+                           tabindex="1" focus-me="record.totalRecovered" placeholder="Enter Total Recovered"
+                           name="totalRecovered" id="totalRecovered" ng-model="record.totalRecovered" required="">
+                </div>
+                <div>
+                    <label>Total Deaths:</label>
+                    <input type="text"
+                           tabindex="1" focus-me="record.totalDeaths" placeholder="Enter Total Deaths"
+                           name="totalDeaths" id="totalDeaths" ng-model="record.totalDeaths" required="">
+                </div>
+                <div>
+                    <label>New Deaths:</label>
+                    <input type="text"
+                           tabindex="1" focus-me="record.newDeaths" placeholder="Enter New Deaths"
+                           name="newDeaths" id="newDeaths" ng-model="record.newDeaths" required="">
+                </div>
+                <div>
+                    <label>Active Cases:</label>
+                    <input type="text"
+                           tabindex="1" focus-me="record.activeCases" placeholder="Enter Active cases"
+                           name="activeCases" id="activeCases" ng-model="record.activeCases" required="">
+                </div>
+                <div>
+                    <label>Critical Cases:</label>
+                    <input type="text"
+                           tabindex="1" focus-me="record.critical" placeholder="Enter Critical cases"
+                           name="critical" id="critical" ng-model="record.critical" required="">
+                </div>
+                <div>
+                    <label>Total Cases/Pop:</label>
+                    <input type="text"
+                           tabindex="1" focus-me="record.casesPop" placeholder="Enter Total Cases/Pop "
+                           name="casesPop" id="casesPop" ng-model="record.casesPop" required="">
+                </div>
+                <div>
+                    <label>Deaths/Pop:</label>
+                    <input type="text"
+                           tabindex="1" focus-me="record.deathsPop" placeholder="Enter Deaths/Pop"
+                           name="deathsPop" id="deathsPop" ng-model="record.deathsPop" required="">
+                </div>
+                <div>
+                    <label>First Case Date:</label>
+                    <input type="text"
+                           tabindex="1" focus-me="record.firstCase" placeholder="Enter First Case Date"
+                           name="firstCase" id="firstCase" ng-model="record.firstCase" required="">
+                </div>
+                <div >
+                    <div >
+                        <button type="submit"
+                                ng-enter="submit()" ng-click="submit()">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

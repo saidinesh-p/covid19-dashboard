@@ -1,0 +1,28 @@
+<div>
+<div>
+			<h4>
+				<b>COVID RECORDS BY STATE</b>
+			</h4>
+	<input type="text" placeholder="state" state="state" ng-model="state">
+	<button type="submit"
+			ng-enter="submit()" ng-click="submit()">Search</button>
+		</div>
+	<table >
+		<thead>
+			<tr>
+				<th scope="col">State</th>
+				<th scope="col">Active Cases</th>
+				<th scope="col">Recovered</th>
+				<th scope="col">Deaths</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="record in getAllRecords">
+				<td>{{record.state}}</td>
+				<td>{{record.active}}</td>
+				<td>{{record.recovered}}</td>
+				<td>{{record.deaths}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

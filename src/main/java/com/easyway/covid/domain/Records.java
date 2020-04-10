@@ -5,15 +5,15 @@ import java.util.Date;
 public class Records {
     private Integer id;
     private String country;
-    private Double totalCases;
-    private Double newCases;
-    private Double totalRecovered;
-    private Double totalDeaths;
-    private Double newDeaths;
-    private Double activeCases;
-    private Double critical;
-    private Double casesPop;
-    private Double deathsPop;
+    private Integer totalCases;
+    private Integer newCases;
+    private Integer totalRecovered;
+    private Integer totalDeaths;
+    private Integer newDeaths;
+    private Integer activeCases;
+    private Integer critical;
+    private Integer casesPop;
+    private Integer deathsPop;
     private String firstCase;
 
 
@@ -37,67 +37,67 @@ public class Records {
         this.country = country;
     }
 
-    public Double getTotalCases() {
+    public Integer getTotalCases() {
         return totalCases;
     }
 
-    public void setTotalCases(Double totalCases) {
+    public void setTotalCases(Integer totalCases) {
         this.totalCases = totalCases;
     }
 
-    public Double getNewCases() {
+    public Integer getNewCases() {
         return newCases;
     }
 
-    public void setNewCases(Double newCases) {
+    public void setNewCases(Integer newCases) {
         this.newCases = newCases;
     }
 
-    public Double getTotalRecovered() {
+    public Integer getTotalRecovered() {
         return totalRecovered;
     }
 
-    public void setTotalRecovered(Double totalRecovered) {
+    public void setTotalRecovered(Integer totalRecovered) {
         this.totalRecovered = totalRecovered;
     }
 
-    public Double getTotalDeaths() { return totalDeaths; }
+    public Integer getTotalDeaths() { return totalDeaths; }
 
-    public void setTotalDeaths(Double totalDeaths) { this.totalDeaths = totalDeaths; }
+    public void setTotalDeaths(Integer totalDeaths) { this.totalDeaths = totalDeaths; }
 
-    public Double getNewDeaths() { return newDeaths; }
+    public Integer getNewDeaths() { return newDeaths; }
 
-    public void setNewDeaths(Double newDeaths) { this.newDeaths = newDeaths; }
+    public void setNewDeaths(Integer newDeaths) { this.newDeaths = newDeaths; }
 
-    public Double getActiveCases() {
+    public Integer getActiveCases() {
         return activeCases;
     }
 
-    public void setActiveCases(Double activeCases) {
+    public void setActiveCases(Integer activeCases) {
         this.activeCases = activeCases;
     }
 
-    public Double getCritical() {
+    public Integer getCritical() {
         return critical;
     }
 
-    public void setCritical(Double critical) {
+    public void setCritical(Integer critical) {
         this.critical = critical;
     }
 
-    public Double getCasesPop() {
+    public Integer getCasesPop() {
         return casesPop;
     }
 
-    public void setCasesPop(Double casesPop) {
+    public void setCasesPop(Integer casesPop) {
         this.casesPop = casesPop;
     }
 
-    public Double getDeathsPop() {
+    public Integer getDeathsPop() {
         return deathsPop;
     }
 
-    public void setDeathsPop(Double deathsPop) {
+    public void setDeathsPop(Integer deathsPop) {
         this.deathsPop = deathsPop;
     }
 

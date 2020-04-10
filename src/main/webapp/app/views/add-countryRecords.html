@@ -1,0 +1,56 @@
+
+<div>
+
+		<div align="center" style="
+    width: 1000px;
+    padding-right: 0px;
+    padding-left: 500px;
+    height: 50px;
+    color: #15ebba;">
+			<h4>
+				<b> ADD Country Record Details</b>
+			</h4>
+		</div>
+		<div align="center">
+			<div>
+				<form role="form" style="width: 800px;">
+					<div>
+						<label>State:</label>
+							<input type="text"
+							 tabindex="1" focus-me="record.state" placeholder="Enter State"
+							  name="state" id="state" ng-model="record.state" required="true">
+					</div>
+					<div>
+						<label>Total:</label>
+						<input type="text"
+							   tabindex="1" focus-me="record.total" placeholder="Enter Total Cases"
+							   name="total" id="total" ng-model="record.total" required="">
+					</div>
+					<div>
+						<label>Active Cases:</label>
+							<input type="text"
+							 tabindex="1" focus-me="record.active" placeholder="Enter Active Cases"
+							  name="active" id="active" ng-model="record.active" required="">
+					</div>
+					<div>
+						<label>Recovered:</label>
+							<input type="text"
+							 tabindex="1" focus-me="record.recovered" placeholder="Enter Recovered"
+							  name="recovered" id="recovered" ng-model="record.recovered" required="">
+					</div>
+					<div>
+						<label>Deaths:</label>
+							<input type="text"
+							 tabindex="1" focus-me="record.deaths" placeholder="Enter Deaths"
+							  name="deaths" id="deaths" ng-model="record.deaths" required="">
+					</div>
+					<div >
+						<div >
+							<button type="submit"
+								ng-enter="submit()" ng-click="submit()">Submit</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+</div>

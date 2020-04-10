@@ -1,0 +1,42 @@
+<div>
+<div>
+	<h4>
+		<b>COVID RECORDS BY COUNTRY</b>
+	</h4>
+	<input type="text" placeholder="country" state="country" ng-model="country">
+	<button type="submit"
+			ng-enter="submit()" ng-click="submit()">Search</button>
+</div>
+	<table >
+		<thead>
+			<tr>
+				<th scope="col">Country,Other</th>
+				<th scope="col">TotalL Cases</th>
+				<th scope="col">New Cases</th>
+				<th scope="col">Total Deaths</th>
+				<th scope="col">New Deaths</th>
+				<th scope="col">TotalL Recovered</th>
+				<th scope="col">Active Cases</th>
+				<th scope="col">Critical</th>
+				<th scope="col">Tot Cases/1M Pop</th>
+				<th scope="col">Deaths/1M Pop</th>
+				<th scope="col">Reported 1<sup>st</sup> Case</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="record in getAllRecords">
+				<td>{{record.country}}</td>
+				<td>{{record.totalCases}}</td>
+				<td>{{record.newCases}}</td>
+				<td>{{record.totalRecovered}}</td>
+				<td>{{record.totalDeaths}}</td>
+				<td>{{record.newDeaths}}</td>
+				<td>{{record.activeCases}}</td>
+				<td>{{record.critical}}</td>
+				<td>{{record.casesPop}}</td>
+				<td>{{record.deathsPop}}</td>
+				<td>{{record.firstCase}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
