@@ -28,20 +28,20 @@ covid.config(function($stateProvider, $urlRouterProvider) {
 covid.controller('world-dashboardCtrl', [ '$scope','$http',
 	function($scope, $http) {
 		console.log('world-dashboardCtrl');
-		$scope.getAllRecords = function() {
+		$scope.getAllWorldRecords = function() {
 			var responsePromise = $http.get("http://localhost:8080/covid/rest/covid/getAllRecords");
 			responsePromise.then(successCallback, errorCallback);
 			function successCallback(response) {
 				if (response.status === 200) {
-					$scope.getAllRecords = response.data.Records;
-					console.log($scope.getAllRecords);
+					$scope.getWorldRecords = response.data.Records;
+					console.log($scope.getAllWorldRecords);
 				}
 			}
 			function errorCallback(error) {
 					$window.alert(JSON.stringify(error.data.Error[0].Message));
 			}
 		}
-		$scope.getAllRecords();
+		$scope.getAllWorldRecords();
 		$scope.submit = function() {
                 	console.log('submit function');
                 		var country=$scope.country;
@@ -49,35 +49,35 @@ covid.controller('world-dashboardCtrl', [ '$scope','$http',
                 		responsePromise.then(successCallback, errorCallback);
                 		function successCallback(response) {
                 			if (response.status=== 200) {
-                				$scope.getAllRecords = response.data.Records;
-                				console.log($scope.getAllRecords);
+                				$scope.getWorldRecords = response.data.Records;
+                				console.log($scope.getWorldRecords);
                 			}
                 		}
                 		function errorCallback(error) {
                 				$window.alert(JSON.stringify(error.data.Error[0].Message));
                 		}
                 	}
-                	$scope.getAllRecords();
+
 }]);
 
 covid.controller('country-dashboardCtrl', [ '$scope','$http',
 	function($scope, $http) {
 		console.log('country-dashboardCtrl');
-		$scope.getAllRecords = function() {
-		console.log('getAllRecords function');
+		$scope.getAllCountryRecords = function() {
+		console.log('getAllCountryRecords function');
 			var responsePromise = $http.get("http://localhost:8080/covid19/api/jpa/getAllRecordDetails");
 			responsePromise.then(successCallback, errorCallback);
 			function successCallback(response) {
 				if (response.status=== 200) {
-					$scope.getAllRecords = response.data.recordsObject;
-					console.log($scope.getAllRecords);
+					$scope.getCountryRecords = response.data.recordsObject;
+					console.log($scope.getAllCountryRecords);
 				}
 			}
 			function errorCallback(error) {
 					$window.alert(JSON.stringify(error.data.Error[0].Message));
 			}
 		}
-		$scope.getAllRecords();
+		$scope.getAllCountryRecords();
 		$scope.submit = function() {
         	console.log('submit function');
         		var state=$scope.state;
@@ -85,15 +85,15 @@ covid.controller('country-dashboardCtrl', [ '$scope','$http',
         		responsePromise.then(successCallback, errorCallback);
         		function successCallback(response) {
         			if (response.status=== 200) {
-        				$scope.getAllRecords = response.data.recordsObject;
-        				console.log($scope.getAllRecords);
+        				$scope.getCountryRecords = response.data.recordsObject;
+        				console.log($scope.getCountryRecords);
         			}
         		}
         		function errorCallback(error) {
         				$window.alert(JSON.stringify(error.data.Error[0].Message));
         		}
         	}
-        	$scope.getAllRecords();
+
 }]);
 
 covid.controller('add-countryRecordsCtrl', [ '$scope','$http',
@@ -106,13 +106,13 @@ covid.controller('add-countryRecordsCtrl', [ '$scope','$http',
 		});
 		responsePromise.then(successCallback);
 		function successCallback(response) {
-
+        if (response.status === 200)
 				alert("data inserted");
 
 		}
 		function errorCallback(error) {
-                					$window.alert(JSON.stringify(error.data.Error[0].Message));
-                			}
+           alert(JSON.stringify(error.data.Error[0].Message));
+        }
 	}
 }]);
 
@@ -126,12 +126,11 @@ covid.controller('add-worldRecordsCtrl', [ '$scope','$http',
 		});
 		responsePromise.then(successCallback);
 		function successCallback(response) {
-
+        if (response.status === 200)
 				alert("data inserted");
 			}
 		function errorCallback(error) {
-        					$window.alert(JSON.stringify(error.data.Error[0].Message));
-        			}
-
+        		$window.alert(JSON.stringify(error.data.Error[0].Message));
+        	}
 	}
 }]);
