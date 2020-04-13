@@ -33,8 +33,8 @@ covid.controller('world-dashboardCtrl', [ '$scope','$http',
 			responsePromise.then(successCallback, errorCallback);
 			function successCallback(response) {
 				if (response.status === 200) {
-					$scope.getWorldRecords = response.data.Records;
-					console.log($scope.getAllWorldRecords);
+					$scope.WorldRecords = response.data.Records;
+					console.log($scope.WorldRecords);
 				}
 			}
 			function errorCallback(error) {
@@ -49,8 +49,8 @@ covid.controller('world-dashboardCtrl', [ '$scope','$http',
                 		responsePromise.then(successCallback, errorCallback);
                 		function successCallback(response) {
                 			if (response.status=== 200) {
-                				$scope.getWorldRecords = response.data.Records;
-                				console.log($scope.getWorldRecords);
+                				$scope.WorldRecords = response.data.Records;
+                				console.log($scope.WorldRecords);
                 			}
                 		}
                 		function errorCallback(error) {
@@ -69,8 +69,8 @@ covid.controller('country-dashboardCtrl', [ '$scope','$http',
 			responsePromise.then(successCallback, errorCallback);
 			function successCallback(response) {
 				if (response.status=== 200) {
-					$scope.getCountryRecords = response.data.recordsObject;
-					console.log($scope.getAllCountryRecords);
+					$scope.CountryRecords = response.data.recordsObject;
+					console.log($scope.CountryRecords);
 				}
 			}
 			function errorCallback(error) {
@@ -85,8 +85,8 @@ covid.controller('country-dashboardCtrl', [ '$scope','$http',
         		responsePromise.then(successCallback, errorCallback);
         		function successCallback(response) {
         			if (response.status=== 200) {
-        				$scope.getCountryRecords = response.data.recordsObject;
-        				console.log($scope.getCountryRecords);
+        				$scope.CountryRecords = response.data.recordsObject;
+        				console.log($scope.CountryRecords);
         			}
         		}
         		function errorCallback(error) {
