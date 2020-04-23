@@ -50,6 +50,8 @@ covid.controller('world-dashboardCtrl', [ '$scope','$http',
                 		function successCallback(response) {
                 			if (response.status=== 200) {
                 				$scope.WorldRecords = response.data.Records;
+                				$scope.newDeaths=WorldRecords.get(newDeaths)
+                				console.log($scope.newDeaths);
                 				console.log($scope.WorldRecords);
                 			}
                 		}
@@ -114,6 +116,22 @@ covid.controller('add-countryRecordsCtrl', [ '$scope','$http',
            alert(JSON.stringify(error.data.Error[0].Message));
         }
 	}
+	$scope.update=function(){
+		var responsePromise = $http.put("http://localhost:8080/covid19/api/jpa/updateRecordsDetails",$scope.record,{
+			headers : {
+				'Content-Type' : 'application/json'
+			},
+		});
+		responsePromise.then(successCallback);
+		function successCallback(response) {
+        if (response.status === 200)
+				alert("data inserted");
+
+		}
+		function errorCallback(error) {
+           alert(JSON.stringify(error.data.Error[0].Message));
+        }
+	}
 }]);
 
 covid.controller('add-worldRecordsCtrl', [ '$scope','$http',
@@ -128,6 +146,21 @@ covid.controller('add-worldRecordsCtrl', [ '$scope','$http',
 		function successCallback(response) {
         if (response.status === 200)
 				alert("data inserted");
+			}
+		function errorCallback(error) {
+        		$window.alert(JSON.stringify(error.data.Error[0].Message));
+        	}
+	}
+	$scope.update=function(){
+		var responsePromise = $http.post("http://localhost:8080/covid/rest/covid/updateRecords",$scope.record,{
+			headers : {
+				'Content-Type' : 'application/json'
+			},
+		});
+		responsePromise.then(successCallback);
+		function successCallback(response) {
+        if (response.status === 200)
+				alert("data updated");
 			}
 		function errorCallback(error) {
         		$window.alert(JSON.stringify(error.data.Error[0].Message));

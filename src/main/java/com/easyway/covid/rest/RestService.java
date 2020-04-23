@@ -115,12 +115,7 @@ public class RestService {
         assert builder != null;
         return builder.build();
     }
-
-
-
-
-
-        public static Object readObject(String response, Class<?> obj)
+   public static Object readObject(String response, Class<?> obj)
             throws JsonParseException, JsonMappingException, IOException {
 
         ObjectMapper mapper = new ObjectMapper();
@@ -128,8 +123,7 @@ public class RestService {
         mapper.setAnnotationIntrospector(introspector);
         return mapper.readValue(response, obj);
     }
-
-    public static String getExceptionMessage(Throwable t) {
+   public static String getExceptionMessage(Throwable t) {
 
         String msg = t.getLocalizedMessage();
         if (StringUtils.isBlank(msg)) {
@@ -140,5 +134,4 @@ public class RestService {
         }
         return msg;
     }
-
 }
