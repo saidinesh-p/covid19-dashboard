@@ -1,0 +1,47 @@
+<header class="section page-header" >
+	<div class="rd-navbar-wrap" >
+		<nav class="rd-navbar">
+			<div class="rd-navbar-main">
+				<div>
+					<div class="rd-nav-item" align="right">
+						<a class="rd-nav-link" href="#!world-dashboard">WORLD</a>
+					</div>
+					<div class="rd-nav-item" align="right">
+						<a class="rd-nav-link" href="#!add-countryRecords">UPDATE</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+</header>
+<div class="table-outer table-rounded table-responsive-sm">
+<div  class="panel-heading" align="center">
+			<h4>
+				<b>COVID RECORDS BY STATE</b>
+			</h4>
+	<div align="left">
+		<input type="text" placeholder="state" state="state" ng-model="state">
+		<button type="submit"
+				ng-enter="submit()" ng-click="submit()">Search</button>
+	</div>
+
+</div>
+	<table class="table-custom table-custom-primary table-hover" align="center">
+		<thead>
+			<tr>
+				<th scope="col">State</th>
+				<th scope="col">Active Cases</th>
+				<th scope="col">Recovered</th>
+				<th scope="col">Deaths</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="record in CountryRecords">
+				<td>{{record.state}}</td>
+				<td>{{record.active}}</td>
+				<td>{{record.recovered}}</td>
+				<td>{{record.deaths}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
