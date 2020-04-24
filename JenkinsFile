@@ -5,7 +5,12 @@ pipeline {
         jdk 'java' 
     }
     stages {
-        stage ('Initialize') {
+	stage ('Clone sources') {
+            steps {
+                git url:'https://github.com/saidinesh-p/covid19-dashboard.git'
+            }
+        }
+        stage ('Clean') {
             steps {
                 sh 'mvn clean'
             }
