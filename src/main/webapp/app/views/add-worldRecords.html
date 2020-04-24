@@ -4,10 +4,13 @@
             <div class="rd-navbar-main">
                 <div>
                     <div class="rd-nav-item" align="right">
-                        <a class="rd-nav-link" href="#!add-countryRecords">UPDATE-INDIA RECORDS</a>
+                        <a class="rd-nav-link" href="#!world-dashboard">WORLD</a>
                     </div>
                     <div class="rd-nav-item" align="right">
-                        <a class="rd-nav-link" href="#!country-dashboard">VIEW</a>
+                        <a class="rd-nav-link" href="#!country-dashboard">INDIA</a>
+                    </div>
+                    <div class="rd-nav-item" align="right">
+                        <a class="rd-nav-link" href="#!add-countryRecords">UPDATE-INDIA RECORDS</a>
                     </div>
                 </div>
             </div>
@@ -33,66 +36,72 @@
                     <label class="col-sm-5 col-xs-11 col-md-3 control-label">Total Cases:</label>
                     <input type="text"
                            tabindex="1" focus-me="record.totalCases" placeholder="Enter Total Cases"
-                           name="totalCases" id="totalCases" ng-model="record.totalCases" required="">
+                           name="totalCases" id="totalCases" ng-model="record.totalCases">
                 </div>
                 <div class="form-group">
                     <label class="col-sm-5 col-xs-11 col-md-3 control-label">New Cases:</label>
                     <input type="text"
                            tabindex="1" focus-me="record.newCases" placeholder="Enter New Cases"
-                           name="newCases" id="newCases" ng-model="record.newCases" required="">
+                           name="newCases" id="newCases" ng-model="record.newCases">
                 </div>
                 <div class="form-group">
                     <label class="col-sm-5 col-xs-11 col-md-3 control-label">Total Recovered:</label>
                     <input type="text"
                            tabindex="1" focus-me="record.totalRecovered" placeholder="Enter Total Recovered"
-                           name="totalRecovered" id="totalRecovered" ng-model="record.totalRecovered" required="">
+                           name="totalRecovered" id="totalRecovered" ng-model="record.totalRecovered" >
                 </div>
                 <div class="form-group">
                     <label class="col-sm-5 col-xs-11 col-md-3 control-label">Total Deaths:</label>
                     <input type="text"
                            tabindex="1" focus-me="record.totalDeaths" placeholder="Enter Total Deaths"
-                           name="totalDeaths" id="totalDeaths" ng-model="record.totalDeaths" required="">
+                           name="totalDeaths" id="totalDeaths" ng-model="record.totalDeaths" >
                 </div>
                 <div class="form-group">
                     <label class="col-sm-5 col-xs-11 col-md-3 control-label">New Deaths:</label>
                     <input type="text"
                            tabindex="1" focus-me="record.newDeaths" placeholder="Enter New Deaths"
-                           name="newDeaths" id="newDeaths" ng-model="record.newDeaths" required="">
+                           name="newDeaths" id="newDeaths" ng-model="record.newDeaths" >
                 </div>
                 <div class="form-group">
                     <label class="col-sm-5 col-xs-11 col-md-3 control-label">Active Cases:</label>
                     <input type="text"
                            tabindex="1" focus-me="record.activeCases" placeholder="Enter Active cases"
-                           name="activeCases" id="activeCases" ng-model="record.activeCases" required="">
+                           name="activeCases" id="activeCases" ng-model="record.activeCases" >
                 </div>
                 <div class="form-group">
                     <label class="col-sm-5 col-xs-11 col-md-3 control-label">Critical Cases:</label>
                     <input type="text"
                            tabindex="1" focus-me="record.critical" placeholder="Enter Critical cases"
-                           name="critical" id="critical" ng-model="record.critical" required="">
+                           name="critical" id="critical" ng-model="record.critical" >
                 </div>
                 <div class="form-group">
                     <label class="col-sm-5 col-xs-11 col-md-3 control-label">Total Cases/Pop:</label>
                     <input type="text"
                            tabindex="1" focus-me="record.casesPop" placeholder="Enter Total Cases/Pop "
-                           name="casesPop" id="casesPop" ng-model="record.casesPop" required="">
+                           name="casesPop" id="casesPop" ng-model="record.casesPop" >
                 </div>
                 <div class="form-group">
                     <label class="col-sm-5 col-xs-11 col-md-3 control-label">Deaths/Pop:</label>
                     <input type="text"
                            tabindex="1" focus-me="record.deathsPop" placeholder="Enter Deaths/Pop"
-                           name="deathsPop" id="deathsPop" ng-model="record.deathsPop" required="">
+                           name="deathsPop" id="deathsPop" ng-model="record.deathsPop" >
                 </div>
                 <div class="form-group">
                     <label class="col-sm-5 col-xs-11 col-md-3 control-label">First Case Date:</label>
                     <input type="text"
                            tabindex="1" focus-me="record.firstCase" placeholder="Enter First Case Date"
-                           name="firstCase" id="firstCase" ng-model="record.firstCase" required="">
+                           name="firstCase" id="firstCase" ng-model="record.firstCase" >
                 </div>
                 <div class="form-group">
                     <div class="col-md-2 col-xs-11 col-sm-7" >
                         <button type="submit"  class="btn btn-primary"
-                                ng-enter="submit()" ng-click="submit()">Submit</button>
+                                ng-enter="submit()" ng-click="submit()">ADD</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-2 col-xs-11 col-sm-7" >
+                        <button type="submit"  class="btn btn-primary"
+                                ng-enter="update()" ng-click="update()">UPDATE</button>
                     </div>
                 </div>
             </form>

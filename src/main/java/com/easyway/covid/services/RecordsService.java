@@ -50,7 +50,4 @@ public class RecordsService {
             sqlSession.close();
         }
     }
-
-
-
 }
