@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage("initialize code"){
       steps {
-        git 'https://github.com/saidinesh-p/covid19-dashboard.git'
+        git credentialsId: '4eadea32-908f-473c-a5d2-01b38e97e6f7', url: 'https://github.com/saidinesh-p/covid19-dashboard.git'
         }
        }
      stage("mvn build"){
