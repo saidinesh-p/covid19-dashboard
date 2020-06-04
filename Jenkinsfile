@@ -13,6 +13,7 @@ pipeline {
      stage("mvn build"){
        steps{
          sh 'mvn clean package'
+         junit '**/target/*.xml'
          }
         }
        }
