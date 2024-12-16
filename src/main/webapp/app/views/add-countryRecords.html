@@ -4,10 +4,13 @@
 			<div class="rd-navbar-main">
 				<div>
 					<div class="rd-nav-item" align="right">
-						<a class="rd-nav-link" href="#!add-worldRecords">UPDATE-WORLD RECORDS</a>
+						<a class="rd-nav-link" href="#!world-dashboard">WORLD</a>
 					</div>
 					<div class="rd-nav-item" align="right">
-						<a class="rd-nav-link" href="#!world-dashboard">VIEW</a>
+						<a class="rd-nav-link" href="#!country-dashboard">INDIA</a>
+					</div>
+					<div class="rd-nav-item" align="right">
+						<a class="rd-nav-link" href="#!add-worldRecords">UPDATE-WORLD RECORDS</a>
 					</div>
 				</div>
 			</div>
@@ -56,7 +59,13 @@
 					<div class="form-group" >
 						<div class="col-md-2 col-xs-11 col-sm-7" >
 							<button type="submit" class="btn btn-primary"
-								ng-enter="submit()" ng-click="submit()">Submit</button>
+								ng-enter="submit()" ng-click="submit()">Add</button>
+						</div>
+					</div>
+					<div class="form-group" >
+						<div class="col-md-2 col-xs-11 col-sm-7" >
+							<button type="submit" class="btn btn-primary"
+								ng-enter="update()" ng-click="update()">Update</button>
 						</div>
 					</div>
 				</form>

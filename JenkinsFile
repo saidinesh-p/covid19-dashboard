@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    tools { 
+        maven 'Apache Maven 3.6.0' 
+        jdk 'java' 
+    }
+    stages {
+	stage ('Clone sources') {
+            steps {
+                git url:'https://github.com/saidinesh-p/covid19-dashboard.git'
+            }
+        }
+        stage ('Clean') {
+            steps {
+                sh 'mvn clean'
+            }
+        }
+
+        stage ('Build') {
+            steps {
+                 sh 'mvn install'
+            }
+        }
+    }
+}

@@ -4,7 +4,6 @@ h1, h2, h3, h4, h5, h6, .heading {
 	font-family: Muli, sans-serif;
 	font-weight: 300;
 	color: #588edc;
-
 }
 
 .table-custom {
@@ -34,7 +33,6 @@ h1, h2, h3, h4, h5, h6, .heading {
 	border-bottom: 1px solid #ebebeb;
 	white-space: nowrap;
 }
-
 @media (max-width: 991.98px) {
 	.table-custom th {
 		padding-top: 20px;
@@ -63,8 +61,7 @@ h1, h2, h3, h4, h5, h6, .heading {
 	position: relative;
 	overflow-x: auto;
 	overflow-y: hidden;
-	border-radius: 10px;
-	border: 1px solid #ebebeb;
+	border-collapse: collapse
 }
 
 .table-rounded .table-custom {
@@ -155,3 +152,42 @@ body {
 .rd-navbar-panel, .rd-navbar-static .rd-menu, .rd-navbar-fixed .rd-navbar-nav-wrap.active, .rd-navbar-fixed .rd-navbar-dummy, .rd-navbar-fixed .rd-navbar-submenu {
 	transition: 0.3s all ease-in-out;
 }
+
+
+.table-td{
+		font-weight: bold;
+		text-align:right;
+		background-color: red;
+	}
+.table-td:empty{
+	background-color: white;;
+}
+.table-td1{
+		font-weight: bold;
+		text-align:right;
+		background-color: #FFEEAA;
+	}
+.table-td1:empty{
+	background-color: white;
+}
+.table-data{
+	font-weight: bold;
+	text-align:right;
+}
+.table-country{
+	font-weight: bold;
+	font-size:15px;
+	text-align:left;
+}
+.table-bordered{
+	cell-padding:auto;
+	margin-left:10px;
+	margin-right:50px;
+	width:95%;
+}
+.table-data1{
+	font-weight: bold;
+	text-align:left;
+}
+	
+	
